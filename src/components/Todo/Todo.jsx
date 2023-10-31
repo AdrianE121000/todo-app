@@ -1,3 +1,6 @@
+import imgClose from '../../assets/close-icon.svg';
+import imgCheck from '../../assets/check-icon.svg';
+
 const Todo = ({ todo, handleSetComplete, handleDelete }) => {
   const { id, title, completed } = todo;
 
@@ -10,7 +13,7 @@ const Todo = ({ todo, handleSetComplete, handleDelete }) => {
             className='bg-green-700 p-1 rounded-full cursor-pointer'>
             <img
               className='h-4 w-4 '
-              src='/check-icon.svg'
+              src={imgCheck}
               alt='Check Icon'
             />
           </div>
@@ -26,7 +29,7 @@ const Todo = ({ todo, handleSetComplete, handleDelete }) => {
       <img
         onClick={() => handleDelete(id)}
         className='h-5 w-5 cursor-pointer transition-all duration-300 ease-in'
-        src='/close-icon.svg'
+        src={imgClose}
         alt='Close Icon'
       />
     </div>
